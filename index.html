@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+</head>
+<body>
+    <h1>Customer Churn Prediction</h1>
+    <form method="POST" action="/">
+        <!-- Add input fields corresponding to the features used in the model -->
+        <!-- For example: -->
+        Gender: <input type="text" name="gender"><br>
+        Senior Citizen: <input type="text" name="SeniorCitizen"><br>
+        Partner: <input type="text" name="Partner"><br>
+        Dependents: <input type="text" name="Dependents"><br>
+        Tenure: <input type="text" name="tenure"><br>
+        <!-- Add other input fields here... -->
+        <input type="submit" value="Submit">
+    </form>
+    {% if prediction %}
+        <h2>Prediction:</h2>
+        {{ prediction | safe }}
+    {% endif %}
+</body>
+</html>
+
